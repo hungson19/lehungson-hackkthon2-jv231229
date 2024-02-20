@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin-Tài khoản</title>
+    <link rel="stylesheet" href="../../css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="admin-header">
+      <div class="admin-header-left">
+        <i class="fa-solid fa-bars"></i>
+        <span>Administrators</span>
+      </div>
+
+      <div class="admin-header-right">
+        <img
+          class="avatar"
+          src="https://lh3.googleusercontent.com/-C2to6ph1TeU/AAAAAAAAAAI/AAAAAAAAAAA/ALKGfkkjLxE3vb2ultc2TJa1DFm-HVqgsQ/photo.jpg?sz=50"
+          alt=""
+        />
+        <span class="user-name">Lê Hùng Sơn</span>
+        <div class="option-container">
+          <i id="iconDropdown" class="fa-solid fa-chevron-down"></i>
+          <ul id="listOption" class="list-option">
+            <li class="option">Thông tin cá nhân</li>
+            <li class="option">Đổi mật khẩu</li>
+            <li class="option">Đăng xuất</li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main class="admin-account-main">
+      <menu class="admin-menu">
+        <a
+          class="admin-menu-link active"
+          href="http://127.0.0.1:5501/portfolio.html"
+        >
+          <i class="fa-solid fa-house"></i>
+          <span>Home</span>
+        </a>
+
+        <a class="admin-menu-link" href="./language.html">
+          <i class="fa-solid fa-users"></i>
+          <span>Language management</span>
+        </a>
+        <a class="admin-menu-link" href="./duan.html">
+          <i class="fa-solid fa-bookmark"></i>
+          <span>Project management</span>
+        </a>
+      </menu>
+
+      <div class="admin-account-content">
+        <h1 style="padding: 20px; background-color: #fff">My Projects</h1>
+
+        <form class="form-input">
+          <div class="container" style="padding: 0 20px">
+            <div class="input-container">
+              <span class="input-symbol">@</span>
+              <input
+                type="text"
+                class="input-field name"
+                placeholder="Language Name"
+              />
+            </div>
+            <div class="input-container">
+              <span class="input-symbol">@</span>
+              <input
+                type="text"
+                class="input-field img"
+                placeholder="Image URL"
+              />
+            </div>
+            <div class="input-container">
+              <span class="input-symbol">@</span>
+              <input
+                type="text"
+                class="input-field year"
+                placeholder="Year Experience"
+              />
+            </div>
+
+            <button type="submit" class="new-project">+ New Project</button>
+          </div>
+        </form>
+
+        <table style="margin: 0 20px">
+          <thead>
+            <tr>
+              <th>Số thứ tự</th>
+              <th>language Name</th>
+              <th>Image URL</th>
+              <th>Year Experience</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+
+          <tbody id="data-language"></tbody>
+          <!-- Add more rows as needed -->
+        </table>
+      </div>
+    </main>
+    <script type="module" src="../../js/admin/language.js"></script>
+  </body>
+</html>
